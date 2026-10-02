@@ -1,0 +1,1 @@
+const fs=require('node:fs');fs.mkdirSync('dist',{recursive:true});for(const file of ['index.html','style.css','app.js','favicon.svg'])fs.copyFileSync(file,'dist/'+file);if(fs.existsSync('documents'))fs.cpSync('documents','dist/documents',{recursive:true});if(fs.existsSync('assets'))fs.cpSync('assets','dist/assets',{recursive:true});console.log('Static portfolio built in dist/');
