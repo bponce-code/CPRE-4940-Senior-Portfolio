@@ -1,38 +1,33 @@
-# Benjamin Ponce — Senior Portfolio
+# Ben Ponce — Senior Portfolio
 
-Responsive, dependency-free electrical engineering portfolio prepared for Vercel.
+Electrical engineering senior portfolio for CPRE/EE 4940. Static HTML and CSS with no dependencies, deployed on Vercel at https://bponce.vercel.app.
 
-## Run
+## Run locally
 
-`npm run dev` starts http://localhost:3000. `npm run build` produces `dist/`.
+`npm run dev` serves the site at http://localhost:3000.
 
-## Deploy to Vercel
+`npm run build` copies the site into `dist/`. The dev server serves `dist/` whenever it exists, so delete `dist/` after building if you keep editing.
 
-Import this GitHub repository in Vercel. Framework preset: Other. Build command: `npm run build`. Output directory: `dist`. No environment variables required.
+## Deploy
 
-## Content editing
+Vercel settings: Framework preset **Other**, build command `npm run build`, output directory `dist`.
 
-- `index.html`: introduction, career objective, reflections, documents, contact.
-- `app.js`: project descriptions, individual roles, skills, resources, and big-picture contributions.
-- `style.css`: visual design and responsive layout.
-- Add PDFs under `documents/`, then replace the document status labels with actual download links.
+## Files
 
-## Complete before academic submission
+| Path | What it is |
+| --- | --- |
+| `index.html` | Cover, contents, then sections I–VIII: About, Senior Design, Projects (i–iv), Experience (i–ii), Résumé, Reflections (i–ii), Ethics, Contact |
+| `resume.html` | Résumé shown as a page, with a download panel on the side |
+| `ethics.html` | Full EE 232 ethics case study |
+| `style.css` | All styles. Colours are tokens at the top (`--accent` is the lime) |
+| `app.js` | Mobile menu and header divider |
+| `assets/` | Cover photo and project figures |
+| `documents/` | PDFs: résumé, lab reports, CPRE 288 SOW, senior design problem statement, ethics paper |
+| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Lime "BP" tab icon |
+| `og-image.png` | Link preview image for LinkedIn, iMessage, and other apps |
 
-- Confirm full display name; add email and LinkedIn.
-- Replace senior-design placeholder with project title, description, individual role, knowledge gained, supporting document links, and big-picture contribution.
-- Confirm individual contributions for both EE 230 projects.
-- Confirm prime detector implementation, role, tools, and verification method.
-- Upload final ethics paper, project evidence, and senior-design reports.
-- Review both reflection drafts against the actual rubrics.
-- Add awards, research, or activities only if applicable and verified.
+## Updating content
 
-No internship is claimed. Unavailable documents are labeled rather than linked to missing files.
-
-## Design direction
-
-Original editorial engineering design: warm off-white canvas, charcoal typography, lime accent panel, oversized headlines, serif emphasis, numbered technical project cards, and circuit illustrations drawn as SVG. Behance reference could not be accessed during implementation; this design is a proposed direction rather than a claimed reproduction.
-
-## Résumé page
-
-`resume.html` displays the supplied résumé PDF and offers download and open-in-new-tab links. Replace `documents/Benjamin-Ponce-Martinez-Resume.pdf` to update the résumé without changing the links. The build includes both the page and PDF.
+- **Résumé:** replace `documents/Benjamin-Ponce-Martinez-Resume.pdf` and update the matching text in `resume.html`.
+- **Placeholders:** search `index.html` for `class="todo"` to find what still needs to be filled in.
+- **Link preview:** the preview tags point to `https://bponce.vercel.app`. If the domain changes, update `og:url`, `og:image`, and `canonical` in each HTML file.
