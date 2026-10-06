@@ -23,7 +23,7 @@ Import this GitHub repository in Vercel. Framework preset: Other. Build command:
 - Replace senior-design placeholder with project title, description, individual role, knowledge gained, supporting document links, and big-picture contribution.
 - Confirm individual contributions for both EE 230 projects.
 - Confirm prime detector implementation, role, tools, and verification method.
-- Upload final résumé, ethics paper, project evidence, and senior-design reports.
+- Upload final ethics paper, project evidence, and senior-design reports.
 - Review both reflection drafts against the actual rubrics.
 - Add awards, research, or activities only if applicable and verified.
 
@@ -32,3 +32,7 @@ No internship is claimed. Unavailable documents are labeled rather than linked t
 ## Design direction
 
 Original editorial engineering design: warm off-white canvas, charcoal typography, lime accent panel, oversized headlines, serif emphasis, numbered technical project cards, and circuit illustrations drawn as SVG. Behance reference could not be accessed during implementation; this design is a proposed direction rather than a claimed reproduction.
+
+## Résumé page
+
+`resume.html` displays the supplied résumé PDF and offers download and open-in-new-tab links. Replace `documents/Benjamin-Ponce-Martinez-Resume.pdf` to update the résumé without changing the links. The build includes both the page and PDF.
