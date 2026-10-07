@@ -210,6 +210,9 @@ details.more:not([open]) summary .opened{display:none}
 .hero::after{right:-22vw;bottom:-30vw}
 .contents::after{right:-25vw;top:-25vw}
 .contact::after{left:-25vw;bottom:-30vw}
+.flow path{fill:none;stroke:none}
+.electron{fill:var(--accent);stroke:var(--accent-ink);stroke-width:.35;filter:drop-shadow(0 0 2px var(--accent))}
+.fig-oneline .electron{stroke-width:2.4}
 .hero-name h1 .last{background:linear-gradient(transparent 62%,var(--accent) 62%,var(--accent) 92%,transparent 92%)}
 .fig figcaption span,.sheet-head .numeral,.sub-num,.toc .num,.steps li::before{color:var(--accent-ink)}
 .fig-oneline svg [stroke-width="6"]{stroke:var(--accent-ink)}
