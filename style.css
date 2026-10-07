@@ -121,15 +121,11 @@ img{height:auto}
 .todo{display:inline-block;font-family:var(--mono);font-size:12px;color:var(--muted);border:1px dashed #c7c5be;padding:1px 8px;margin-right:4px}
 .chip{font-family:var(--mono);font-size:12px;color:var(--muted)}
 
-/* ---------- Résumé band ---------- */
-.resume-band{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+/* ---------- Buttons ---------- */
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;font-size:14px;text-decoration:none;border:1px solid var(--ink);color:var(--ink);border-radius:999px;transition:background .15s,color .15s}
 .btn:hover,.btn.primary{background:var(--ink);color:var(--bg)}
 .btn.primary:hover{background:transparent;color:var(--ink)}
-.highlights li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid var(--line)}
-.highlights li:last-child{border-bottom:1px solid var(--line)}
-.highlights .label{margin:2px 0 0}
 
 /* ---------- Reflections ---------- */
 .reflection{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px);padding:clamp(48px,6vw,80px) 0;border-top:1px solid var(--line)}
@@ -175,12 +171,12 @@ details.more:not([open]) summary .opened{display:none}
 .resume-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(24px,4vw,56px);align-items:start}
 .resume-sheet{background:#fff;border:1px solid var(--line);padding:clamp(24px,5vw,64px);box-shadow:0 24px 48px -36px rgba(17,20,24,.35)}
 .cv-head{text-align:center;border-bottom:2px solid var(--ink);padding-bottom:16px}
-.cv-head h2{font-variation-settings:'wdth' 88;font-weight:700;font-size:clamp(26px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
+.cv-head h2,.cv-head .cv-name{font-variation-settings:'wdth' 88;font-weight:700;font-size:clamp(26px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
 .cv-head p{margin-top:6px;font-size:14px;color:var(--muted)}
 .cv-head a{text-decoration:none}
 .cv-head a:hover{text-decoration:underline;text-underline-offset:3px}
 .cv-section{margin-top:28px}
-.cv-section h3{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:14px}
+.cv-section h3,.cv-section h4{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:14px}
 .cv-item+.cv-item{margin-top:20px}
 .cv-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
 .cv-row strong{font-weight:600;color:var(--ink)}
@@ -240,7 +236,7 @@ details.more:not([open]) summary .opened{display:none}
   .hero-name{order:2}
   .hero-side{order:3;padding-bottom:0}
   .scroll-cue{left:var(--gutter);right:auto}
-  .about-grid,.resume-band,.reflection,.info-card{grid-template-columns:minmax(0,1fr)}
+  .about-grid,.reflection,.info-card{grid-template-columns:minmax(0,1fr)}
   .resume-layout{grid-template-columns:minmax(0,1fr)}
   .resume-aside{position:static;order:-1}
   .resume-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -258,7 +254,7 @@ details.more:not([open]) summary .opened{display:none}
   .figs,.figs-3,.wh,.info-grid{grid-template-columns:minmax(0,1fr)}
   .info-grid div:nth-child(odd){border-right:0}
   .info-grid div:nth-last-child(2){border-bottom:1px solid var(--line)}
-  .fields>div,.highlights li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .fields>div{grid-template-columns:minmax(0,1fr);gap:6px}
   .cv-row{flex-wrap:wrap;gap:2px 12px}
   .cv-skills div{grid-template-columns:minmax(0,1fr);gap:0}
 }

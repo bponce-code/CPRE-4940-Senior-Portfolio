@@ -28,6 +28,6 @@ Vercel settings: Framework preset **Other**, build command `npm run build`, outp
 
 ## Updating content
 
-- **Résumé:** replace `documents/Benjamin-Ponce-Martinez-Resume.pdf` and update the matching text in `resume.html`.
+- **Résumé:** replace `documents/Benjamin-Ponce-Martinez-Resume.pdf` and update the matching text in both `resume.html` and section V of `index.html` (the `resume-sheet` block).
 - **Placeholders:** search `index.html` for `class="todo"` to find what still needs to be filled in.
 - **Link preview:** the preview tags point to `https://bponce.vercel.app`. If the domain changes, update `og:url`, `og:image`, and `canonical` in each HTML file.
