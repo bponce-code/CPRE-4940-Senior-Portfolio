@@ -252,10 +252,10 @@
       </div>
       <dl class="fields">
         <div><dt>Description</dt><dd>
-          <p>A circuit that reads a temperature sensor signal and lights LEDs to show the temperature range. The green LED is on below 40 °C, the yellow LED turns on above 40 °C and stays on until the temperature falls below 30 °C, and the red LED turns on above 100 °C and stays on until it falls below 80 °C.</p>
-          <p>Two TL082 op-amps are wired as Schmitt triggers with separate reference voltages. The first switches between 0.3 V and 0.4 V and drives the green and yellow LEDs in an anti-parallel pair. The second switches between 0.8 V and 1.0 V and drives the red LED. The hysteresis keeps each LED from flickering near its threshold.</p>
+          <p>The circuit uses a temperature sensor to provide the input to the circuit, which then activates the corresponding LEDs. The green LED will be lit if the temperature is less than 40 °C, the yellow LED will be lit above 40 °C up to when the temperature drops to 30 °C, and the red LED will be lit for temperatures above 100 °C up to 80 °C.</p>
+          <p>Two TL082 operational amplifiers are used as Schmitt triggers with different reference voltages. The first one alternates between 0.3V and 0.4V and is used to control both the green and the yellow LEDs in antiparallel connection. The second one alternates between 0.8V and 1.0V and controls the red LED.</p>
         </dd></div>
-        <div><dt>My role</dt><dd>I calculated the voltage thresholds and helped build and test the circuit. When testing showed the original thresholds were wrong and the output was not what we expected, I suggested changing the resistor values and recalculating the thresholds. We re-tested and got the correct output.</dd></div>
+        <div><dt>My role</dt><dd>I determined the voltage levels and assisted in building and testing the circuit. It was realized that the original voltage levels were incorrect and the output did not meet our expectations; therefore, I proposed changing the resistor levels and determining the correct voltage levels. We tested and achieved the correct output.</dd></div>
         <div><dt>Skills gained</dt><dd><ul>
           <li>Schmitt trigger design and hysteresis</li>
           <li>Calculating V+, V−, V<sub>TH</sub>, V<sub>TL</sub>, resistor ratios, and V<sub>REF</sub></li>
@@ -281,10 +281,10 @@
       </div>
       <dl class="fields">
         <div><dt>Description</dt><dd>
-          <p>A circuit that splits one audio signal into three channels for a three-way speaker system: low (below 300 Hz), mid (300 to 5000 Hz), and high (above 5000 Hz).</p>
-          <p>The low channel is a second-order active low-pass filter with a potentiometer that sets the gain from 1 to 5. The mid channel is a band-pass filter built from a low-pass and a high-pass stage, centered near 1225 Hz. The high channel is a second-order passive high-pass filter with a gain below 1.</p>
+          <p>Circuit that separates one audio signal into three paths which have three ways speakers system with frequencies such as low frequency (less than 300Hz), middle frequency (300Hz to 5000Hz), and high frequency (more than 5000Hz).</p>
+          <p>Low-frequency part is a second-order active low pass filter with potentiometer and its gain can be adjusted between 1 and 5. Middle-frequency part is a band pass filter consisting of two filters such as low-pass and high-pass filter with center frequency about 1225Hz. High-frequency part is a second-order passive high-pass filter with gain less than 1.</p>
         </dd></div>
-        <div><dt>My role</dt><dd>I calculated component values and built the low-frequency channel, using three resistors in series to reach the 17 kΩ design value. The first build gave the wrong output voltage and gain, so we tried different parts until a 100 kΩ potentiometer and a 15.68 kΩ resistor gave the correct 1 to 5 adjustable gain. We then measured each channel's frequency response to confirm the design.</dd></div>
+        <div><dt>My role</dt><dd>Component values were determined and a low-frequency channel was constructed where three resistors in series provided for the 17 kΩ desired resistance. After the incorrect output voltage and gain were obtained during the initial construction, different components were used until a potentiometer of 100 kΩ and a resistor of 15.68 kΩ provided the right gain of 1 to 5.</dd></div>
         <div><dt>Skills gained</dt><dd><ul>
           <li>First- and second-order active and passive filter design</li>
           <li>Corner frequency, gain, and band-pass center frequency calculations</li>
@@ -304,8 +304,8 @@
         <p class="entry-meta">CPRE 281<br>Digital logic<br>Fall 2023</p>
       </header>
       <dl class="fields">
-        <div><dt>Description</dt><dd>A combinational circuit that outputs 1 whenever a 4-bit input is a prime number (2, 3, 5, 7, 11, or 13). The logic was derived from a truth table, simplified, and implemented in Verilog.</dd></div>
-        <div><dt>My role</dt><dd>I designed and debugged the detector using sum-of-products and K-map simplification, converted a NAND-only circuit into an equivalent AND/OR/NOT design to find logical discrepancies, and developed corrective logic to patch an existing circuit with as few added components as possible.</dd></div>
+        <div><dt>Description</dt><dd>Combinational circuit which gives an output 1 only when the 4 bit input is a prime number (2, 3, 5, 7, 11, or 13). Logic for the circuit was generated using truth table and then simplified in Verilog.</dd></div>
+        <div><dt>My role</dt><dd>I constructed and debugged the detector using sum of products and K-maps, reduced a NAND gate-only circuit to AND/OR/NOT gates to detect logical mistakes, and created a correction logic to repair a circuit with the minimum number of added gates.</dd></div>
         <div><dt>Skills gained</dt><dd><ul>
           <li>Truth tables, SOP expressions, and K-map simplification</li>
           <li>NAND-only and AND/OR/NOT equivalence</li>
@@ -330,8 +330,8 @@
       </div>
       <dl class="fields">
         <div><dt>Description</dt><dd>
-          <p>An autonomous vehicle project framed as an underwater search and recovery robot for the US Coast Guard. After a shipwreck, the CyBot is launched into a search area to find and recover a lost asset without putting a diver at risk, with a goal of reaching the target in under 20 minutes.</p>
-          <p>The robot combines user commands with its infrared, PING))) ultrasonic, bump, and cliff sensors to avoid boulders, kelp, debris, and underwater caves, stay inside the communication boundary, and stop inside the destination zone. The lab field maps each obstacle type to an underwater hazard.</p>
+          <p>An autonomous vehicle project, which is presented in form of an underwater search and rescue robot for the US Coast Guard. Following a shipwreck, CyBot is sent to the area in search of a missing asset, without endangering any divers and aims to locate the asset within 20 minutes.</p>
+          <p>In this process, the robot uses user commands together with infrared, PING))), bump, and cliff sensors to maneuver through obstacles such as rocks, kelp beds, debris, caves, and remaining within the communication range and stopping in the destination range. The hazards in the laboratory field map are related to the respective underwater obstacle.</p>
         </dd></div>
         <div><dt>Technical approach</dt><dd>
           <dl class="wh">
