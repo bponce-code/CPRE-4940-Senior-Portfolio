@@ -22,6 +22,15 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 <script defer src="app.js"></script>
+<style>
+@media print {
+  @page { size: letter; margin: 0.5in; }
+  .site-header, .page-top, .resume-aside, .site-footer { display: none !important; }
+  body, main, .sheet, .sheet-inner, .resume-layout { margin: 0 !important; padding: 0 !important; background: #fff !important; display: block !important; max-width: none !important; width: 100% !important; box-shadow: none !important; }
+  .resume-sheet { margin: 0 !important; padding: 0 !important; max-width: none !important; width: 100% !important; border: 0 !important; box-shadow: none !important; }
+  .cv-item, .cv-section { break-inside: avoid; }
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
