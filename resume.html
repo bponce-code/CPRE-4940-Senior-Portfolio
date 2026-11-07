@@ -122,10 +122,10 @@
       <aside class="resume-aside" aria-label="Résumé downloads">
         <div class="resume-card">
           <span class="label">Résumé PDF</span>
-          <p>View or download my résumé.</p>
+          <p>View the updated résumé, or save it as a PDF using your browser’s print dialog.</p>
           <div class="resume-actions">
-            <a class="btn primary" href="documents/Benjamin-Ponce-Martinez-Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
-            <a class="btn" href="documents/Benjamin-Ponce-Martinez-Resume.pdf" download="Benjamin-Ponce-Martinez-Resume.pdf">Download Resume ↓</a>
+            <a class="btn primary" href="resume.html">View Resume ↗</a>
+            <a class="btn" href="resume.html?print=1">Save Resume as PDF ↓</a>
           </div>
         </div>
         <div class="resume-card">
@@ -147,5 +147,6 @@
   <span>Ben Ponce, 2026</span>
   <a href="index.html">Back to portfolio ←</a>
 </footer>
+<script>if(new URLSearchParams(window.location.search).has("print")){window.addEventListener("load",()=>window.print(),{once:true});}</script>
 </body>
 </html>
